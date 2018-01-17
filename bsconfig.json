@@ -1,0 +1,22 @@
+{
+  "name": "reason-scripts",
+  "sources": {
+    "dir": "src",
+    "subdirs": ["apollo", "components", "atoms"]
+  },
+  "bs-dependencies": [
+    "reason-react",
+    "bs-jest",
+    "reason-apollo"    
+  ],
+  "reason": {
+    "react-jsx": 2
+  },
+  "bsc-flags": [
+    "-bs-super-errors"
+  ],
+  "ppx-flags": [
+    "graphql_ppx/ppx"
+  ],
+  "refmt": 3
+}

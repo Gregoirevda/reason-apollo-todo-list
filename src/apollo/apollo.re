@@ -8,12 +8,7 @@ ApolloInMemoryCache.CreateInMemoryCache(
 );
 
 /* Create an HTTP Link */
-module HttpLink =
-ApolloLinks.CreateHttpLink(
-  {
-    let uri = "http://localhost:3010/graphql";
-  }
-);
+let httpLink = ApolloLinks.createHttpLink(~uri="http://localhost:3010/graphql", ());
 
 module Client =
 ReasonApollo.CreateClient(
@@ -21,7 +16,7 @@ ReasonApollo.CreateClient(
     let apolloClient =
       ReasonApollo.createApolloClient(
         ~cache=InMemoryCache.cache,
-        ~link=ApolloLinks.from([|HttpLink.link|]),
+        ~link=httpLink,
         ()
       );
   }

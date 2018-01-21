@@ -11,7 +11,7 @@
     "graphql-tag": "^2.6.1",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
-    "reason-apollo": "^0.5.10",
+    "reason-apollo": "^0.6.10",
     "reason-scripts": "0.8.0",
     "todomvc-app-css": "^2.1.0",
     "todomvc-common": "^1.0.4"
